@@ -19,11 +19,11 @@ const BackgroundLayout = () => {
       let imageString = weather.conditions
       if (imageString.toLowerCase().includes('clear')) {
         setImage(Clear)
-      } else if (imageString.toLowerCase().includes('cloud')) {
-        setImage(Cloudy)
-      } else if (imageString.toLowerCase().includes('rain') || imageString.toLowerCase().includes('shower')) {
+      }  else if (imageString.toLowerCase().includes('rain') || imageString.toLowerCase().includes('shower')) {
         setImage(Rainy)
-      } else if (imageString.toLowerCase().includes('snow')) {
+      } else if (imageString.toLowerCase().includes('cloud') || imageString.toLowerCase().includes('overcast')) {
+        setImage(Cloudy)
+      }else if (imageString.toLowerCase().includes('snow')) {
         setImage(Snow)
       } else if (imageString.toLowerCase().includes('fog')) {
         setImage(Fog)
